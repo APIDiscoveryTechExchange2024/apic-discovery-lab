@@ -3,9 +3,11 @@ name: Send Discovered API to ApiConnect
 on: [pull_request, workflow_dispatch, push]
 
 env:
-  API_HOST: REPLACE
-  PROVIDER_ORG: REPLACE
+  API_HOST: tj-isa-6-420eb34f056ae68f3969289d61f61851-0000.jp-tok.containers.appdomain.cloud/
+  PROVIDER_ORG: tech-jam-student10
   API_FILES: APIfolder/photos.yaml
+  PLATFORM_API_PREFIX: api-manage-1c92b52e-api-manager-tech-jam-apic
+  INSECURE_SKIP_TLS_VERIFY: true
   #API_FILES: APIfolder/uber-api.json
   #API_FILES: APIfolder/coffee-store.yaml
   #API_FOLDERS: APIfolder,APIfolderTwo
@@ -30,6 +32,7 @@ jobs:
         api_folders: ${{ env.API_FOLDERS }}
         resync_check: ${{ true }}
         git_diff: ${{ steps.difference-output.outputs.action_updates }}
+        insecure_skip_tls_verify: ${{ env.INSECURE_SKIP_TLS_VERIFY }}
     - name: Display the action-result
       run: |
         echo "Result of the action: ${{ steps.discover-apis.outputs.action-result }}"
