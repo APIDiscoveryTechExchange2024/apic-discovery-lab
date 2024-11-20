@@ -4,7 +4,7 @@ on: [pull_request, workflow_dispatch, push]
 
 env:
   API_HOST: tj-isa-6-420eb34f056ae68f3969289d61f61851-0000.jp-tok.containers.appdomain.cloud/
-  PROVIDER_ORG: tech-jam-student10
+  PROVIDER_ORG: tech-jam-10
   API_FILES: APIfolder/photos.yaml
   PLATFORM_API_PREFIX: api-manage-1c92b52e-api-manager-tech-jam-apic
   INSECURE_SKIP_TLS_VERIFY: true
