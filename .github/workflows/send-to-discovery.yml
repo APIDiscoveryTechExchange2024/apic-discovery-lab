@@ -25,7 +25,7 @@ jobs:
         api_host: ${{ env.API_HOST }}
         platform_api_prefix: ${{ env.PLATFORM_API_PREFIX }}
         provider_org: ${{ env.PROVIDER_ORG }}
-        api_key: ${{ secrets.apicApikey_participant_0 }}
+        api_key: ${{ secrets.student03_key }}
         api_files: ${{ env.API_FILES }}
         api_folders: ${{ env.API_FOLDERS }}
         resync_check: ${{ true }}
