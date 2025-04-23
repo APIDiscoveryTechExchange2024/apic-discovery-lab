@@ -22,14 +22,16 @@ jobs:
     - uses: ibm-apiconnect/apic-discovery-action@main 
       id: discover-apis
       with:
-        api_host: ${{ env.API_HOST }}
-        platform_api_prefix: ${{ env.PLATFORM_API_PREFIX }}
-        provider_org: ${{ env.PROVIDER_ORG }}
+        api_host: api-manage-e8a163cd-platform-api-tech-jam-apic
+        provider_org: tech-jam-19
+        PLATFORM_API_PREFIX: api-manage-1720ed5d-platform-api-tech-jam-apic
+        INSECURE_SKIP_TLS_VERIFY: true
         api_key: ${{ secrets.apicApikey_participant_0 }}
         api_files: ${{ env.API_FILES }}
         api_folders: ${{ env.API_FOLDERS }}
         resync_check: ${{ true }}
         git_diff: ${{ steps.difference-output.outputs.action_updates }}
+        #
     - name: Display the action-result
       run: |
         echo "Result of the action: ${{ steps.discover-apis.outputs.action-result }}"
