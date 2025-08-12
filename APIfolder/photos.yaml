@@ -77,7 +77,7 @@ x-ibm-configuration:
   properties:
     target-url:
       value: http://example.com/operation-name
-      description: The URL of target service
+      description: The URL of target service right
       encoded: false
 security:
   - clientID: []
