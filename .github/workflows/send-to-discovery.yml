@@ -3,7 +3,7 @@ name: Send Discovered API to ApiConnect
 on: [pull_request, workflow_dispatch, push]
 
 env:
-  API_HOST: us-east-b.apiconnect.test.automation.ibm.com
+  API_HOST: d-itsalive.apiconnect.dev.automation.ibm.com
   PROVIDER_ORG: api-assistant
   API_FILES: APIfolder/photos.yaml
   #API_FILES: APIfolder/uber-api.json
